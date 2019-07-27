@@ -1,0 +1,8 @@
+baseurl: "/homesteadcafe"
+
+menu:
+  # Use these to customise the main navigation.
+  - path: /
+  - path: /menu/
+  - path: /about/
+  - path: /contact-us/

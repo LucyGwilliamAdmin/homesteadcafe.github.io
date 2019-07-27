@@ -6,14 +6,11 @@
    </a>
   
    <ul>
-     {%- if site.menu -%}
-       {%- for item in site.menu -%}
-         <li>
-           <a href="{{ site.baseurl }}{{ item.path }}">{{ item.tabname }}</a>
-         </li>
-       {%- endfor -%}
-     {%- endif -%}
-   </ul>
+  <li><a href="{{ site.baseurl }}/">Home</a></li>
+  <li><a href="{{ site.baseurl }}/menu">Menu</a></li>
+  <li><a href="{{ site.baseurl }}/about">About</a></li>
+  <li><a href="{{ site.baseurl }}/contact-us">Contact us</a></li>
+</ul>
 
   </div>
 </header>

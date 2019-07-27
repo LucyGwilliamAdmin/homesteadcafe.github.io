@@ -4,26 +4,17 @@
    <a href="{{ site.baseurl }}/" id="home">
       <img class="navbar-brand" src="{{ site.baseurl }}/assets/img/homestead_logo.png" alt="logo" />
    </a>
-   
-
-   <nav class="navbar navbar-default" id="main-nav">
-   
-     <ul class="top-level">
-        <li><span data-target="menu">Menu</span></li>
-     </ul>
+  
      
      <ul class="nav navbar-nav menu-target" id="menu">
        {%- if site.menu -%}
          {%- for item in site.menu -%}
-           <li class="nav-link {% if page.permalink == item.path %}active{% endif %}">
+           <li>
              <a href="{{ site.baseurl }}{{ item.path }}">{{ item.tabname }}</a>
            </li>
          {%- endfor -%}
        {%- endif -%}
      </ul>
-
-
-   <nav>
 
   </div>
 </header>

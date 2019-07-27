@@ -1,12 +1,17 @@
 baseurl: "/homesteadcafe"
 
+# Menu
 menu:
   # Use these to customise the main navigation.
   - path: /
-    tabname: Home
-  - path: /menu/
-    tabname: Menu
+    translation_key: Home
+  - path: /reporting-status/
+    translation_key: tab2
   - path: /about/
-    tabname: About
-  - path: /contact-us/
-    tabname: Contact us
+    translation_key: tab3
+  - path: /publications/
+    translation_key: tab4
+  - path: /guidance/
+    translation_key: tab5
+  - path: /faq/
+    translation_key: tab6

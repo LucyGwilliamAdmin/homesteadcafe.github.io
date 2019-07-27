@@ -16,7 +16,7 @@
        {%- if site.menu -%}
          {%- for item in site.menu -%}
            <li class="nav-link {% if page.permalink == item.path %}active{% endif %}">
-             <a href="{{ site.baseurl }}{{ item.path }}">{{ item }}</a>
+             <a href="{{ site.baseurl }}{{ item.path }}">{{ item.tabname }}</a>
            </li>
          {%- endfor -%}
        {%- endif -%}

@@ -5,16 +5,15 @@
       <img class="navbar-brand" src="{{ site.baseurl }}/assets/img/homestead_logo.png" alt="logo" />
    </a>
   
-     
-     <ul class="nav navbar-nav menu-target" id="menu">
-       {%- if site.menu -%}
-         {%- for item in site.menu -%}
-           <li>
-             <a href="{{ site.baseurl }}{{ item.path }}">{{ item.tabname }}</a>
-           </li>
-         {%- endfor -%}
-       {%- endif -%}
-     </ul>
+   <ul>
+     {%- if site.menu -%}
+       {%- for item in site.menu -%}
+         <li>
+           <a href="{{ site.baseurl }}{{ item.path }}">{{ item.tabname }}</a>
+         </li>
+       {%- endfor -%}
+     {%- endif -%}
+   </ul>
 
   </div>
 </header>

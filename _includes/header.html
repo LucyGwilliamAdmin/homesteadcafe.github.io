@@ -56,7 +56,22 @@ body {margin:0;}
 hr.sep {
   border: 1px solid white;
 }
+
+.link {}
 </style>
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("navbar");
+var btns = header.getElementsByClassName("link");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
 
 <header role="banner" style="background-color: aquamarine;">
   <div id="header-things" class="header-container">
@@ -64,13 +79,14 @@ hr.sep {
    <a class="navbar-brand" href="/" id="home">
       <img src="/assets/img/homestead_logo.png" alt="logo" />
    </a>
-
+ <div id="navbar">
    <ul>
-     <li><a href="/contact-us">Contact us</a></li>
-     <li><a href="/about">About</a></li>
-     <li><a href="/menu">Menu</a></li>
-     <li><a href="/">Home</a></li>
+     <li><a class="link active" href="/contact-us">Contact us</a></li>
+     <li><a class="link" href="/about">About</a></li>
+     <li><a class="link" href="/menu">Menu</a></li>
+     <li><a class="link" href="/">Home</a></li>
    </ul>
+ </div>
 
   </div>
   <hr class="sep">

@@ -60,18 +60,6 @@ hr.sep {
 .link {}
 </style>
 
-<script>
-// Add active class to the current button (highlight it)
-var header = document.getElementById("navbar");
-var btns = header.getElementsByClassName("link");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}
-</script>
 
 <header role="banner" style="background-color: aquamarine;">
   <div id="header-things" class="header-container">

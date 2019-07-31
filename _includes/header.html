@@ -18,40 +18,24 @@ body {margin:0;}
   .navbar-brand img {
     width: 100%; }
 
-#header-things ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-  top: 120px;
-  left: 450px;
-  width: fit-content;
-  background: transparent;
-  font-family: monospace;
-  font-size: 17px;
+    
+#topheader .navbar-nav li > a {
+	text-transform: capitalize;
+	color: #555;
+	transition: background-color .2s, color .2s;
+	
+	&:hover,
+	&:focus {
+		background-color: #555;
+		color: white;
+	}
+}
+    
+#topheader .navbar-nav li.active > a {
+	background-color: #FFFFFF;
 }
 
-#header-things li {
-  display: inline-block;
-}
 
-#header-things li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-#header-things li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-#header-things li.active {
-  background-color: #FFFFFF;
-}
 
 hr.sep {
   border: 1px solid white;
@@ -61,20 +45,20 @@ hr.sep {
 </style>
 
 <script>
-$( '#header-things .li a' ).on( 'click', function () {
-$( '#topheader .ul' ).find( 'li.active' ).removeClass( 'active' );
-$( this ).parent( 'li' ).addClass( 'active' );
+$( '#topheader .navbar-nav a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
 });
 </script>
 
 <header role="banner" style="background-color: aquamarine;">
-  <div id="header-things" class="header-container">
+  <div id="topheader" class="header-container">
 
    <a class="navbar-brand" href="/" id="home">
       <img src="/assets/img/homestead_logo.png" alt="logo" />
    </a>
  
-   <ul class="ul">
+   <ul class="nav navbar-nav">
      <li class="active"><a href="/">Home</a></li>
      <li><a href="/menu">Menu</a></li>
      <li><a href="/about">About</a></li>

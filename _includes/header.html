@@ -15,7 +15,13 @@ body {margin:0;}
   max-width: 150px; }
   .navbar-brand img {
     width: 100%; }
-#header-things ul {
+    
+#nav {
+    margin:200px auto;
+    width:430px;
+    }
+    
+#nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -28,21 +34,21 @@ body {margin:0;}
   font-family: monospace;
   font-size: 17px;
 }
-#header-things li {
+#nav ul li {
   display: inline-block;
 }
-#header-things li a {
+#nav ul li a {
   display: block;
   color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-#header-things li a:hover:not(.active) {
+#nav ul li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
-.active {
+#nav ul li a .active {
   background-color: #FFFFFF;
 }
 hr.sep {
@@ -50,6 +56,17 @@ hr.sep {
 }
 .link {}
 </style>
+
+<script>
+    $(function() {
+     var pgurl = window.location.href.substr(window.location.href
+.lastIndexOf("/")+1);
+     $("#nav ul li a").each(function(){
+          if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+          $(this).addClass("active");
+     })
+});
+</script>
 
 
 
@@ -59,14 +76,14 @@ hr.sep {
    <a class="navbar-brand" href="/" id="home">
       <img src="/assets/img/homestead_logo.png" alt="logo" />
    </a>
- <div">
+ <menu id="nav">
    <ul>
      <li><a href="/">Home</a></li>
      <li><a href="/menu">Menu</a></li>
      <li><a href="/about">About</a></li>
      <li><a href="/contact-us">Contact us</a></li>
    </ul>
- </div>
+ </menu>
 
   </div>
   <hr class="sep">

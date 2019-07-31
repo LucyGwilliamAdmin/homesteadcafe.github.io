@@ -16,73 +16,48 @@ body {margin:0;}
   .navbar-brand img {
     width: 100%; }
     
+#topheader .navbar-nav li > a {
+	text-transform: capitalize;
+	color: #555;
+	transition: background-color .2s, color .2s;
+	
+	&:hover,
+	&:focus {
+		background-color: #555;
+		color: white;
+	}
+}
     
-#nav {
-    margin:200px auto;
-    width:430px;
-    }
-
-#nav ul {
-    list-style:none;
-    background-color:#64abfb;
-    }
-
-#nav ul li {
-    display:inline-block;
-    line-height:44px;
-    }
-
-#nav ul li a {
-    margin:10px;
-    color:#FFF;
-    padding:4px;
-    font-size:20px;
-    text-decoration:none;
-    }
-
-#nav ul li a:hover {
-    border-bottom:3px #FFF solid;
-    }
-
-#nav ul li .active {
-    border-bottom:3px #FFF solid;
-    }
-    
+#topheader .navbar-nav li.active > a {
+	background-color: #FFFFFF;
+}
 hr.sep {
   border: 1px solid white;
 }
+.link {}
 </style>
 
 <script>
-    $(function() {
-     var pgurl = window.location.href.substr(window.location.href
-.lastIndexOf("/")+1);
-     $("#nav ul li a").each(function(){
-          if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-          $(this).addClass("active");
-     })
+$( '#topheader .navbar-nav li a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
 });
 </script>
 
-
-
 <header role="banner" style="background-color: aquamarine;">
-  <div id="header-things" class="header-container">
+  <div id="topheader" class="header-container">
 
    <a class="navbar-brand" href="/" id="home">
       <img src="/assets/img/homestead_logo.png" alt="logo" />
    </a>
-
-      
- <menu id="nav">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact-us">Contact us</a></li>
-    </ul>
-</menu>
-
+ 
+   <ul class="navbar-nav">
+     <li class="active"><a href="/">Home</a></li>
+     <li><a href="/menu">Menu</a></li>
+     <li><a href="/about">About</a></li>
+     <li" ><a href="/contact-us">Contact us</a></li>
+   </ul>
+ 
   </div>
   <hr class="sep">
 </header>

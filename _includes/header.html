@@ -61,10 +61,10 @@ hr.sep {
    </a>
 
    <ul id="nav">
-     <li {% if location.href == "https://homesteadcafe.github.io/" %}class="active"{% endif %}><a href="/">Home</a></li>
-     <li {% if location.href == "https://homesteadcafe.github.io/menu/" %}class="active"{% endif %}><a href="/menu">Menu</a></li>
-     <li {% if location.href == "https://homesteadcafe.github.io/about/" %}class="active"{% endif %}><a href="/about">About</a></li>
-     <li {% if location.href == "https://homesteadcafe.github.io/contact-us/" %}class="active"{% endif %}><a href="/contact-us">Contact us</a></li>  
+     <li {% if location.href | remove: '/' == "https://homesteadcafe.github.io/" | remove: '/' %}class="active"{% endif %}><a href="/">Home</a></li>
+     <li {% if location.href | remove: '/' == "https://homesteadcafe.github.io/menu/" | remove: '/' %}class="active"{% endif %}><a href="/menu">Menu</a></li>
+     <li {% if location.href | remove: '/' == "https://homesteadcafe.github.io/about/" | remove: '/' %}class="active"{% endif %}><a href="/about">About</a></li>
+     <li {% if location.href | remove: '/' == "https://homesteadcafe.github.io/contact-us/" | remove: '/' %}class="active"{% endif %}><a href="/contact-us">Contact us</a></li>  
    </ul>
 
   </div>

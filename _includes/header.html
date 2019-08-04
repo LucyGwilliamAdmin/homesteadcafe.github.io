@@ -55,82 +55,7 @@ hr.sep {
   border: 1px solid white;
 }
     
-.link {}
-    
-@media screen and (max-width: 768px) {
-    .top-level {
-      display: block;
-      font-size: 1em;
-      @include noselect;
 
-      li {
-        float: left;
-        width: 50%;
-        cursor: pointer;
-
-        &.active {
-          background: #58595B;
-        }
-
-        span {
-          color: #E5E6E7;
-          display: block;
-          padding: 15px;
-        }
-
-      	button{
-		color: #E5E6E7;
-		display: block;
-		padding: 15px;
-		border: 0;
-		text-transform: uppercase;
-		background-color: inherit;
-		text-align: left;
-	    	width: 100%;
-	}
-      }
-    }
-
-    & .menu-target {
-      background: #58595B;
-    }
-
-    ul.navbar-nav {
-      float: none;
-      display: none;
-      clear: left;
-      margin: 0;
-
-      font-size: 0.938em;
-
-      li {
-        cursor: pointer;
-        a {
-          display: block;
-          background: #58595B;
-          padding: 6px 0 6px;
-          color: #E5E6E7;
-
-          &:hover {
-            color: #E5E6E7;
-          }
-        }
-
-        &.active a {
-          border: none;
-          color: #fff;
-          font-weight: bold;
-
-          &:hover {
-            color: #fff;
-          }
-        }
-
-        &:last-child {
-          padding-bottom: 10px;
-        }
-      }
-    }
 </style>
 
 <script>
@@ -154,10 +79,6 @@ window.onload = setActive;
       <img src="/assets/img/homestead_logo.png" alt="logo" />
    </a>
       
-   <ul class="top-level">
-        <li><span data-target="nav">Menu</span></li>
-   </ul>
-
    <ul id="nav">
      <li><a id="hometab" href="/">Home</a></li>
      <li><a id="menutab" href="/menu">Menu</a></li>

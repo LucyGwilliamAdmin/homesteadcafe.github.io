@@ -56,7 +56,7 @@ hr.sep {
      function setActive() {
       aObj = document.getElementById('nav').getElementsByTagName('a');
       for(i=0;i<aObj.length;i++) { 
-        if(aObj[i].pathname==location.pathname.slice(0,-1)) {
+        if(location.pathname=="/" || aObj[i].pathname==location.pathname.slice(0,-1)) {
         aObj[i].className='active';
       }
     }

@@ -52,6 +52,19 @@ hr.sep {
 .link {}
 </style>
 
+<script>
+     function setActive() {
+      aObj = document.getElementById('nav').getElementsByTagName('a');
+      for(i=0;i<aObj.length;i++) { 
+        if(aObj[i].pathname==location.pathname) {
+        aObj[i].className='active';
+      }
+    }
+  }
+    
+window.onload = setActive;
+</script>
+
 
 <header role="banner" style="background-color: aquamarine;">
   <div id="header-things" class="header-container">
@@ -61,10 +74,10 @@ hr.sep {
    </a>
 
    <ul id="nav">
-     <li><a href="/">Home</a></li>
-     <li><a href="/menu">Menu</a></li>
-     <li><a href="/about">About</a></li>
-     <li><a href="/contact-us">Contact us</a></li>  
+     <li><a id="hometab" href="/">Home</a></li>
+     <li><a id="menutab" href="/menu">Menu</a></li>
+     <li><a id="abouttab" href="/about">About</a></li>
+     <li><a id="contacttab" href="/contact-us">Contact us</a></li>  
    </ul>
 
   </div>

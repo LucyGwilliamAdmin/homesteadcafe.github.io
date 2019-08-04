@@ -1,6 +1,6 @@
 <style>
 body {margin:0;}
-.header-container {
+.header .container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: 69px;
@@ -54,6 +54,10 @@ hr.sep {
 }
 
 @media screen and (max-width: 600px) {
+  .header .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .topnav {overflow: hidden; background-color: transparent;}
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {

@@ -193,8 +193,14 @@ title: The Homestead Café
 
    <script>  
     function myFunction() {
-     document.getElementById("CDSWIDSSP").classList.add("ta"); 
-    }
+      var element, name, arr;
+      element = document.getElementById("CDSWIDSSP");
+      name = "ta";
+      arr = element.className.split(" ");
+        if (arr.indexOf(name) == -1) {
+        element.className += " " + name;
+  }
+}
     
     window.onload = myFunction();
     

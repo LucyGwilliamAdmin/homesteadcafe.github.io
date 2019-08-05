@@ -87,7 +87,7 @@ title: The Homestead Café
     </div>
   </div>
    
-  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script language="javascript">'use strict';$(function() {var width = 400; var animationSpeed = 1400; var pause = 3000; var currentSlide = 1;var $sdr2213 = $('#sdr2213'); var $slideContainer = $('.sld2', $sdr2213); var $sld2 = $('.slideB', $sdr2213); var interval; function startsdr2213() { interval = setInterval(function() { $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {if (++currentSlide === $sld2.length) {currentSlide = 1; $slideContainer.css('margin-left', 0); }});}, pause);} function pausesdr2213() {clearInterval(interval);}$slideContainer.on('mouseenter', pausesdr2213).on('mouseleave', startsdr2213);startsdr2213();});</script>
    <div class="mobile">
     <div style="position: relative; width: 400px; ">

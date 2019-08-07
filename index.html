@@ -101,7 +101,6 @@ title: The Homestead Café
    
   <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script><script language="javascript">'use strict';$(function() {var width = 300; var animationSpeed = 1000; var pause = 3000; var currentSlide = 1;var $sdr2213 = $('#sdr2213'); var $slideContainer = $('.sld2', $sdr2213); var $sld2 = $('.slideB', $sdr2213); var interval; function startsdr2213() { interval = setInterval(function() { $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {if (++currentSlide === $sld2.length) {currentSlide = 1; $slideContainer.css('margin-left', 0); }});}, pause);} function pausesdr2213() {clearInterval(interval);}$slideContainer.on('mouseenter', pausesdr2213).on('mouseleave', startsdr2213);startsdr2213();});</script>
    <div class="mobile">
-    <div style="position: relative; width: 300px; ">
 <style type="text/css">#gpoy2 {position: absolute; right:-126px; top:2px; padding: 6px 0px 3px; z-index:99; opacity: 0.9; transition: 1s;  line-height: 12px;}.repper2 {width: 304px; margin: 0 auto; position: relative; overflow: hidden; border-radius: 11px; box-shadow: 7px 7px 9px #888888 ;}.repper2:hover #gpoy2 {transition: 2s; right:13px; }</style>
    <div class="repper2">
     <div id="gpoy2">
@@ -189,7 +188,6 @@ title: The Homestead Café
  </li>
 
 </ul></div></div></div>
-</div>
 
    <script>
     document.addEventListener("DOMContentLoaded", function(event) { 

@@ -1,4 +1,6 @@
-body {margin:0;}
+body {
+	margin:0;
+}
 header .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -6,14 +8,18 @@ header .container {
     margin-left: 69px;
     overflow: hidden;
 }
+
 .navbar-brand {
   display: block;
   float: left;
   padding: 15px 15px;
   width: 75%;
-  max-width: 150px; }
+  max-width: 150px;
+}
+
 .navbar-brand img {
-  width: 100%; } 
+  width: 100%;
+} 
 	
 .topnav {
   overflow: hidden;
@@ -22,6 +28,7 @@ header .container {
   top: 120px;
   left: 450px;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -32,13 +39,16 @@ header .container {
   font-size: 17px;
   font-family: monospace;
 }
+
 .topnav a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
+
 .topnav a.active {
   background-color: #FFFFFF;
 }
+
 .topnav .icon {
   display: none;
 }
@@ -46,12 +56,17 @@ header .container {
 hr.sep {
   border: 1px solid orange;
 }
+
 @media screen and (max-width: 600px) {
-  body {overflow-x: hidden;}
+  body {
+    overflow-x: hidden;
+	}
+	
   header .container {
     padding-left: 0;
     padding-right: 0;
   }
+	
   .navbar-brand {
     display: block;
     float: left;
@@ -62,24 +77,35 @@ hr.sep {
     margin-right: auto
    }
 	
-  .topnav {overflow: hidden;
+  .topnav {
+	  overflow: hidden;
 	  background-color: #555;
 	  top: auto;
           left: auto;
-          width: -webkit-fill-available;}
-  .topnav a:not(:first-child) {display: none;}
+          width: -webkit-fill-available;
+	}
+	
+  .topnav a:not(:first-child) {
+	  display: none;
+	}
+	
   .topnav a.icon {
     float: right;
     display: block;
   }
+	
 }
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+	  position: relative;
+	}
+	
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+	
   .topnav.responsive a {
     float: none;
     display: block;
